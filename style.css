@@ -24,6 +24,8 @@ body {
 }
 
 body .header {
+  position: relative;
+  bottom: 60px;
   line-height: 1.4;
   letter-spacing: 0.7rem;
   font-weight: 600;
@@ -76,6 +78,12 @@ body .paddingCont .mainGrid .leftGrid {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+body .paddingCont .mainGrid .leftGrid .gridComp img {
+  display: none;
+  position: absolute;
+  width: 20px;
 }
 
 body .paddingCont .mainGrid .leftGrid .billInput {
@@ -169,6 +177,7 @@ body .paddingCont .mainGrid .leftGrid .tipInput .perGrid .perCustom {
 }
 
 body .paddingCont .mainGrid .leftGrid .tipInput .perGrid .perCustom:hover {
+  cursor: text;
   border-radius: 15px;
   background-color: white;
   color: #00474b;
@@ -176,8 +185,8 @@ body .paddingCont .mainGrid .leftGrid .tipInput .perGrid .perCustom:hover {
 }
 
 body .paddingCont .mainGrid .leftGrid .tipInput .perGrid .perCustom:focus {
-  outline: 3px solid;
-  outline-color: #25C3AC;
+  border-radius: 15px;
+  outline-color: #9FE8DF;
 }
 
 body .paddingCont .mainGrid .leftGrid .peopleInput {
@@ -193,6 +202,41 @@ body .paddingCont .mainGrid .leftGrid .peopleInput {
       justify-content: space-around;
 }
 
+body .paddingCont .mainGrid .leftGrid .peopleInput .flexPeopleInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .paddingCont .mainGrid .leftGrid .peopleInput .warningTest {
+  display: none;
+  font-family: "Space Mono", monospace;
+  color: #d67373;
+}
+
+body .paddingCont .mainGrid .leftGrid .peopleInput .warning {
+  border: 2px #d67373 solid;
+}
+
+body .paddingCont .mainGrid .leftGrid .peopleInput .warning::-webkit-input-placeholder {
+  color: #d67373;
+}
+
+body .paddingCont .mainGrid .leftGrid .peopleInput .warning:-ms-input-placeholder {
+  color: #d67373;
+}
+
+body .paddingCont .mainGrid .leftGrid .peopleInput .warning::-ms-input-placeholder {
+  color: #d67373;
+}
+
+body .paddingCont .mainGrid .leftGrid .peopleInput .warning::placeholder {
+  color: #d67373;
+}
+
 body .paddingCont .mainGrid .leftGrid .inputBP {
   text-align: right;
   border: none;
@@ -203,6 +247,17 @@ body .paddingCont .mainGrid .leftGrid .inputBP {
   font-family: "Space Mono", monospace;
   color: #00474b;
   font-weight: 800;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+body .paddingCont .mainGrid .leftGrid input::-webkit-outer-spin-button,
+body .paddingCont .mainGrid .leftGrid input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body .paddingCont .mainGrid .leftGrid input[type=number] {
+  -moz-appearance: textfield;
 }
 
 body .paddingCont .mainGrid .leftGrid .inputBP:focus {
@@ -231,12 +286,17 @@ body .paddingCont .mainGrid .results .resFlex {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
+  font-family: "Space Mono", monospace;
+}
+
+body .paddingCont .mainGrid .results .resFlex .headerPer {
+  font-weight: 100;
+  font-size: .8rem;
 }
 
 body .paddingCont .mainGrid .results .resFlex .headerRes {
   font-size: 1.2rem;
   font-weight: 600;
-  font-family: "Space Mono", monospace;
 }
 
 body .paddingCont .mainGrid .results .resFlex .resNum {

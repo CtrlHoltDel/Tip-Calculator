@@ -19,7 +19,8 @@
 				<div class="leftGrid">
 					<div class="billInput gridComp">
 						<div class="header2">Bill</div>
-						<input type="number" class="inputBP" id="inputBill" />
+						<input type="number" class="inputBP" placeholder="0" id="inputBill" />
+						<img src="./images/icon-dollar.svg" class="dollarIcon" alt="" srcset="">
 					</div>
 					<div class="tipInput gridComp">
 						<div class="header2">Select Tip %</div>
@@ -33,8 +34,12 @@
 						</div>
 					</div>
 					<div class="peopleInput gridComp">
-						<div class="header2">Number of People</div>
-						<input type="number" id="inputPeople" class="inputBP" />
+						<div class="flexPeopleInput">
+							<div class="header2">Number of People </div>
+							<div class="warningTest" id="warningTestID">Can't be zero</div>
+						</div>
+						<input type="number" id="inputPeople" placeholder="0" class="inputBP" />
+						<img src="./images/icon-person.svg" class="personIcon"alt="" srcset="">
 					</div>
 				</div>
 				<div class="results">

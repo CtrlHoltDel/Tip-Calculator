@@ -3,6 +3,7 @@
 $base-color: #00474b;
 $secondary-color: #25C3AC;
 $header-color: hsl(186, 14%, 43%);
+$focus-color: #9FE8DF;
 $main-font: "Space Mono", monospace;
 $hover-colour: #C5E4E7;
 
@@ -21,6 +22,8 @@ body {
 	background-color: #c5e4e7;
 
 	.header {
+		position: relative;
+		bottom: 60px;
 		line-height: 1.4;
 		letter-spacing: 0.7rem;
 		font-weight: 600;
@@ -59,6 +62,14 @@ body {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+
+				.gridComp {
+					img{
+						display: none;
+						position:absolute;
+						width: 20px;
+					}
+				}
 				
 				.billInput {
 					height: 100px;
@@ -118,15 +129,17 @@ body {
 						}
 
 						.perCustom:hover {
+							cursor: text;
 							border-radius: 15px;
 							background-color: white;
 							color: $base-color;
 							outline-color: $secondary-color
 						}
+						
 
 						.perCustom:focus{
-							outline: 3px solid; 
-							outline-color: $secondary-color
+							border-radius: 15px;
+							outline-color: $focus-color;
 						}
 					}
 				}
@@ -137,6 +150,26 @@ body {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-around;
+
+					.flexPeopleInput{
+						display: flex;
+						justify-content: space-between;
+					}
+
+					.warningTest{
+						display: none;
+						font-family: $main-font;
+						color: rgb(214, 115, 115);
+					}
+
+					.warning {
+						border: 2px rgb(214, 115, 115) solid;
+					}
+
+					.warning::placeholder {
+						color: rgb(214, 115, 115);
+					}
+
 				}
 				
 				.inputBP {
@@ -149,10 +182,21 @@ body {
 					font-family: $main-font;
 					color: $base-color;
 					font-weight: 800;
+					border: 2px solid rgba(0, 0, 0, 0);
+				}
+				
+				input::-webkit-outer-spin-button,
+				input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+				}
+
+				input[type=number] {
+				-moz-appearance: textfield;
 				}
 
 				.inputBP:focus {
-					outline-color: #9FE8DF;
+					outline-color: $focus-color;
 				}
 				 
 
@@ -179,11 +223,16 @@ body {
 					display: flex;
 					justify-content: space-between;
 					color: white;
+					font-family: $main-font;
+
+					.headerPer {
+						font-weight: 100;
+						font-size: .8rem;
+					}
 					
 					.headerRes {
 						font-size: 1.2rem;
 						font-weight: 600;
-						font-family: $main-font;
 					}
 
 					.resNum {

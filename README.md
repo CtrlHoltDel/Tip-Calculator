@@ -8,3 +8,5 @@ Tip calculator app exersize from [FrontEndMentor.io](www.frontendmentor.io)
 - Added Javascript which updates the amount based upon inputs.
 - Fixed Readme links.
 - Fixed a bug which stopped totals updating if number of people or bill were updated.
+- Minor CSS tweaks and added a warning for when the people field is empty whilst the others have inputs.
+- Allowed tips of 0%
