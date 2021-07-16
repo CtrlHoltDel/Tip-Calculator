@@ -5,3 +5,4 @@ Tip calculator app exersize from *(FrontEndMentor.io)[www.frontendmentor.io]
 16/07/2021
 
 - Initial commit with some HTML and styling.
+- Added Javascript which updates the amount based upon inputs.

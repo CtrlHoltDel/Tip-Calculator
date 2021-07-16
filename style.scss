@@ -99,6 +99,11 @@ body {
 							cursor: pointer;
 						}
 
+						.perButtonSelected {
+							background-color: $secondary-color;
+							color: $base-color;
+						}
+
 					
 						::placeholder {
 							color: $base-color;

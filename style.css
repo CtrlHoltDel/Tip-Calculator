@@ -139,6 +139,11 @@ body .paddingCont .mainGrid .leftGrid .tipInput .perGrid .perButton:hover {
   cursor: pointer;
 }
 
+body .paddingCont .mainGrid .leftGrid .tipInput .perGrid .perButtonSelected {
+  background-color: #25C3AC;
+  color: #00474b;
+}
+
 body .paddingCont .mainGrid .leftGrid .tipInput .perGrid ::-webkit-input-placeholder {
   color: #00474b;
 }
