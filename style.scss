@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+$base-color: #00474b;
+$secondary-color: #25C3AC;
+$header-color: hsl(186, 14%, 43%);
+$main-font: "Space Mono", monospace;
+$hover-colour: #C5E4E7;
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	background-color: #c5e4e7;
+
+	.header {
+		line-height: 1.4;
+		letter-spacing: 0.7rem;
+		font-weight: 600;
+		font-size: 1.5rem;
+		font-family: $main-font;
+		color: $base-color;
+	}
+
+	.header2 {
+		font-weight: 600;
+		font-family: $main-font;
+		color: $header-color;
+	}
+
+	.paddingCont {
+		width: 880px;
+		height: 440px;
+		background-color: white;
+		border-radius: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px;
+
+		.mainGrid {
+			height: 100%;
+			width: 100%;
+			display: grid;
+			grid:
+				"leftGrid   results" 1fr
+				/ 1fr 1fr;
+			grid-gap: 0 28px;
+
+			.leftGrid {
+				padding: 15px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				
+				.billInput {
+					height: 100px;
+					display: flex;
+					flex-direction: column;
+				}
+
+				.tipInput {
+					display: flex;
+					justify-content: space-around;
+					flex-direction: column;
+					height: 200px;
+
+					.perGrid {
+						padding: 10px 0px;
+						display: grid;
+						grid-template-columns: repeat(3, 1fr);
+						grid-template-rows: repeat(2, 1fr);
+						grid-gap: 15px;
+
+						.perButton {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							background-color: $base-color;
+							color: white;
+							font-size: 1.5rem;
+							font-family: $main-font;
+							font-weight: 800;
+							border-radius: 10px;
+							height: 3rem;
+							width: 100%;
+						}
+
+						.perButton:hover {
+							background-color: $secondary-color;
+							color: $base-color;
+							cursor: pointer;
+						}
+
+					
+						::placeholder {
+							color: $base-color;
+						}
+
+						.perCustom {
+							border-radius: 15px;
+							text-align: center;
+							border: none;
+							color: $base-color;
+							background-color: #f3f8fb;
+						}
+
+						.perCustom:hover {
+							border-radius: 15px;
+							background-color: white;
+							color: $base-color;
+							outline-color: $secondary-color
+						}
+
+						.perCustom:focus{
+							outline: 3px solid; 
+							outline-color: $secondary-color
+						}
+					}
+				}
+
+
+				.peopleInput {
+					height: 100px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+				}
+				
+				.inputBP {
+					text-align: right;
+					border: none;
+					background-color: #f3f8fb;
+					font-size: 1.5rem;
+					padding: 10px;
+					border-radius: 10px;
+					font-family: $main-font;
+					color: $base-color;
+					font-weight: 800;
+				}
+
+				.inputBP:focus {
+					outline-color: #9FE8DF;
+				}
+				 
+
+				
+			}
+
+
+			.results {
+				background-color: $base-color;
+				border-radius: 25px;
+				grid-area: results;
+				padding: 10% 10%;
+
+				.resultsGrid {
+					display: grid;
+					height: 100%;
+					grid: 
+					"tipResult" 1fr
+					"totalResult" 1fr
+					"." .2fr
+					"resetResult" 1fr
+				}
+				.resFlex{
+					display: flex;
+					justify-content: space-between;
+					color: white;
+					
+					.headerRes {
+						font-size: 1.2rem;
+						font-weight: 600;
+						font-family: $main-font;
+					}
+
+					.resNum {
+						font-size: 3rem;
+						font-family: $main-font;
+						font-weight: 600;
+						color: $secondary-color;
+					}
+				}
+				.tipResult {
+					grid-area: tipResult;
+				}
+				.totalResult {
+					grid-area: totalResult;
+				}
+				.resetResult {
+					display: flex;
+					justify-content: center;
+					align-items: flex-end;
+					grid-area: resetResult;
+					.resetButton {
+						text-align: center;
+						background-color: $secondary-color;
+						font-family: $main-font;
+						width: 100%;
+						padding: 10px 0px;
+						font-weight: 600;
+						color: $base-color;
+						font-size: 1.5rem;
+						border-radius: 15px;
+					}
+
+					.resetButton:hover{
+						cursor: pointer;
+						background-color: $hover-colour;
+					}
+				}
+			}
+		}
+	}
+}
