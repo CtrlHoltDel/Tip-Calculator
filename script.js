@@ -75,7 +75,7 @@ let formula = (function () {
     let totalAmount = 0.00
 
 	let updateTip = function(newTip) {
-        if(newTip != "utCustom" && newTip != "utBill" && newTip != "utPeople"){
+        if(newTip != "utCustom"){
 
             //If the value coming in is a number it sets the tip per value to that number (this happens if a button is pressed.)
             tipPer = newTip
@@ -167,14 +167,16 @@ let formula = (function () {
     );
 
     //Keyup to get value after keypress has ended.
-	window.addEventListener("keyup", function () {
-        
+	window.addEventListener("keyup", function () {        
         //Updating the tip everytime a key is pressed inside of the custom field.
-        formula.updateTip(document.activeElement.id.slice(3));
-
+        if(document.activeElement.id === "inputCustom"){
+            formula.updateTip(document.activeElement.id.slice(3));
+        }
         //Updating the overall value when a key is pressed.
         formula.updateValues();
+
     });
+
 
     DOM.resetButton().addEventListener('click', function(){
         formula.resetValues();
