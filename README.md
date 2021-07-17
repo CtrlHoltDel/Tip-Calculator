@@ -1,4 +1,4 @@
-Tip calculator app exersize from [FrontEndMentor.io](www.frontendmentor.io)
+Tip calculator app exersize from [FrontEndMentor.io](https://www.frontendmentor.io/)
 
 [Live Page](https://ctrlholtdel.github.io/Tip-Calculator/index.html)
 
@@ -11,3 +11,7 @@ Tip calculator app exersize from [FrontEndMentor.io](www.frontendmentor.io)
 - Minor CSS tweaks and added a warning for when the people field is empty whilst the others have inputs.
 - Allowed tips of 0%.
 - Added media query in css for mobile design.
+
+17-07-2021
+
+- Fixed broken link in ReadMe.
