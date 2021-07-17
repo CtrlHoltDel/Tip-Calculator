@@ -1,8 +1,13 @@
-Tip calculator app exersize from [FrontEndMentor.io](https://www.frontendmentor.io/)
+# Tip calculator
+
+App exersize from [FrontEndMentor.io](https://www.frontendmentor.io/)
+
+```Made in HTML, SCSS and vanilla JavaScript```
 
 [Live Page](https://ctrlholtdel.github.io/Tip-Calculator/index.html)
 
-16/07/2021
+
+### 16/07/2021
 
 - Initial commit with some HTML and styling.
 - Added Javascript which updates the amount based upon inputs.
@@ -12,7 +17,7 @@ Tip calculator app exersize from [FrontEndMentor.io](https://www.frontendmentor.
 - Allowed tips of 0%.
 - Added media query in css for mobile design.
 
-17-07-2021
+### 17-07-2021
 
 - Fixed broken link in ReadMe.
 - Fixed duplicate SCSS (Code that appeared both in the mobile version and desktop.)
