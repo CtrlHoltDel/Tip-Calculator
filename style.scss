@@ -12,15 +12,155 @@ $hover-colour: #c5e4e7;
 	margin: 0px;
 }
 
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: $hover-colour;
+
+	.header {
+		font-family: $main-font;
+		color: $base-color;
+	}
+
+	.header2 {
+		font-weight: 600;
+		font-family: $main-font;
+		color: $header-color;
+	}
+
+	.paddingCont {
+		background-color: white;
+
+		.mainGrid {
+			.leftGrid {
+				display: flex;
+				flex-direction: column;
+				.gridComp {
+					img {
+						display: none;
+						position: absolute;
+						width: 20px;
+					}
+				}
+
+				.tipInput {
+					.perGrid {
+						padding: 10px 0px;
+						display: grid;
+						grid-gap: 15px;
+
+						.perButton {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							background-color: $base-color;
+							color: white;
+							font-size: 1.5rem;
+							font-family: $main-font;
+							font-weight: 800;
+							border-radius: 10px;
+							height: 3rem;
+							width: 100%;
+						}
+
+						.perButton:hover {
+							background-color: $secondary-color;
+							color: $base-color;
+							cursor: pointer;
+						}
+
+						.perButtonSelected {
+							background-color: $secondary-color;
+							color: $base-color;
+						}
+
+						::placeholder {
+							color: $base-color;
+						}
+
+						.perCustom {
+							border-radius: 15px;
+							text-align: center;
+							border: none;
+							color: $base-color;
+							background-color: #f3f8fb;
+						}
+
+						.perCustom:hover {
+							cursor: text;
+							border-radius: 15px;
+							background-color: white;
+							color: $base-color;
+							outline-color: $secondary-color;
+						}
+
+						.perCustom:focus {
+							border-radius: 15px;
+							outline-color: $focus-color;
+						}
+					}
+				}
+
+				.inputBP {
+					text-align: right;
+					border: none;
+					background-color: #f3f8fb;
+					font-family: $main-font;
+					color: $base-color;
+					border-radius: 10px;
+					font-weight: 800;
+					border: 2px solid rgba(0, 0, 0, 0);
+				}
+
+				input::-webkit-outer-spin-button,
+				input::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+
+				input[type="number"] {
+					-moz-appearance: textfield;
+				}
+
+				.inputBP:focus {
+					outline-color: $focus-color;
+				}
+			}
+
+			.results {
+				background-color: $base-color;
+
+				.resultsGrid {
+					display: grid;
+					height: 100%;
+				}
+				.resFlex {
+					color: white;
+					font-family: $main-font;
+
+					.resNum {
+						font-size: 3rem;
+						color: $secondary-color;
+					}
+				}
+				.resetResult {
+					display: flex;
+					justify-content: center;
+					.resetButton {
+						background-color: $secondary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 1000px) {
 	body {
-		display: flex;
 		justify-content: center;
-		align-items: center;
-		flex-direction: column;
 		height: 100vh;
 		width: 100vw;
-		background-color: $hover-colour;
 
 		.header {
 			position: relative;
@@ -29,20 +169,11 @@ $hover-colour: #c5e4e7;
 			letter-spacing: 0.7rem;
 			font-weight: 600;
 			font-size: 1.5rem;
-			font-family: $main-font;
-			color: $base-color;
-		}
-
-		.header2 {
-			font-weight: 600;
-			font-family: $main-font;
-			color: $header-color;
 		}
 
 		.paddingCont {
 			width: 880px;
 			height: 440px;
-			background-color: white;
 			border-radius: 25px;
 			display: flex;
 			justify-content: center;
@@ -60,17 +191,7 @@ $hover-colour: #c5e4e7;
 
 				.leftGrid {
 					padding: 15px;
-					display: flex;
-					flex-direction: column;
 					justify-content: space-between;
-
-					.gridComp {
-						img {
-							display: none;
-							position: absolute;
-							width: 20px;
-						}
-					}
 
 					.billInput {
 						height: 100px;
@@ -85,61 +206,8 @@ $hover-colour: #c5e4e7;
 						height: 200px;
 
 						.perGrid {
-							padding: 10px 0px;
-							display: grid;
 							grid-template-columns: repeat(3, 1fr);
 							grid-template-rows: repeat(2, 1fr);
-							grid-gap: 15px;
-
-							.perButton {
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								background-color: $base-color;
-								color: white;
-								font-size: 1.5rem;
-								font-family: $main-font;
-								font-weight: 800;
-								border-radius: 10px;
-								height: 3rem;
-								width: 100%;
-							}
-
-							.perButton:hover {
-								background-color: $secondary-color;
-								color: $base-color;
-								cursor: pointer;
-							}
-
-							.perButtonSelected {
-								background-color: $secondary-color;
-								color: $base-color;
-							}
-
-							::placeholder {
-								color: $base-color;
-							}
-
-							.perCustom {
-								border-radius: 15px;
-								text-align: center;
-								border: none;
-								color: $base-color;
-								background-color: #f3f8fb;
-							}
-
-							.perCustom:hover {
-								cursor: text;
-								border-radius: 15px;
-								background-color: white;
-								color: $base-color;
-								outline-color: $secondary-color;
-							}
-
-							.perCustom:focus {
-								border-radius: 15px;
-								outline-color: $focus-color;
-							}
 						}
 					}
 
@@ -170,42 +238,17 @@ $hover-colour: #c5e4e7;
 					}
 
 					.inputBP {
-						text-align: right;
-						border: none;
-						background-color: #f3f8fb;
 						font-size: 1.5rem;
 						padding: 10px;
-						border-radius: 10px;
-						font-family: $main-font;
-						color: $base-color;
-						font-weight: 800;
-						border: 2px solid rgba(0, 0, 0, 0);
-					}
-
-					input::-webkit-outer-spin-button,
-					input::-webkit-inner-spin-button {
-						-webkit-appearance: none;
-						margin: 0;
-					}
-
-					input[type="number"] {
-						-moz-appearance: textfield;
-					}
-
-					.inputBP:focus {
-						outline-color: $focus-color;
 					}
 				}
 
 				.results {
-					background-color: $base-color;
 					border-radius: 25px;
 					grid-area: results;
 					padding: 10% 10%;
 
 					.resultsGrid {
-						display: grid;
-						height: 100%;
 						grid:
 							"tipResult" 1fr
 							"totalResult" 1fr
@@ -215,8 +258,6 @@ $hover-colour: #c5e4e7;
 					.resFlex {
 						display: flex;
 						justify-content: space-between;
-						color: white;
-						font-family: $main-font;
 
 						.headerPer {
 							font-weight: 100;
@@ -229,10 +270,8 @@ $hover-colour: #c5e4e7;
 						}
 
 						.resNum {
-							font-size: 3rem;
 							font-family: $main-font;
 							font-weight: 600;
-							color: $secondary-color;
 						}
 					}
 					.tipResult {
@@ -242,13 +281,10 @@ $hover-colour: #c5e4e7;
 						grid-area: totalResult;
 					}
 					.resetResult {
-						display: flex;
-						justify-content: center;
 						align-items: flex-end;
 						grid-area: resetResult;
 						.resetButton {
 							text-align: center;
-							background-color: $secondary-color;
 							font-family: $main-font;
 							width: 100%;
 							padding: 10px 0px;
@@ -269,162 +305,78 @@ $hover-colour: #c5e4e7;
 	}
 }
 
-@media(max-width: 1000px){
-	body{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: $hover-colour;
-		.header{
+@media (max-width: 1000px) {
+	body {
+		.header {
 			padding: 50px 0px;
-			font-family: $main-font;
 			font-size: 2rem;
 			letter-spacing: 0.4rem;
-			color: $base-color;
 		}
 
-		.paddingCont{
+		.header2 {
+			width: 80%;
+			margin: 8px;
+		}
+
+		.paddingCont {
 			width: 84%;
-			background-color: white;
 			padding: 8%;
 			border-radius: 15px;
 
-			.mainGrid{
+			.mainGrid {
 				display: flex;
 				flex-direction: column;
-				.leftGrid{
-					display: flex;
-					flex-direction: column;
+				.leftGrid {
 					padding-bottom: 30px;
 
-					.gridComp{
+					.gridComp {
 						display: flex;
 						flex-direction: column;
 						align-items: center;
 
-						.flexPeopleInput{
+						.flexPeopleInput {
 							display: flex;
 							align-items: space-between;
 						}
-						
-						.warningTest{
+
+						.warningTest {
 							display: none;
 						}
 
-						.perGrid{
-							padding: 10px 0px;
-							display: grid;
+						.perGrid {
 							grid-template-columns: repeat(2, 1fr);
 							grid-template-rows: repeat(3, 1fr);
-							grid-gap: 15px;
-
-
-							.perButton {
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								background-color: $base-color;
-								color: white;
-								font-size: 1.5rem;
-								font-family: $main-font;
-								font-weight: 800;
-								border-radius: 10px;
-								height: 3rem;
-								width: 100%;
-							}
-
-							.perButton:hover {
-								background-color: $secondary-color;
-								color: $base-color;
-								cursor: pointer;
-							}
-
-							.perButtonSelected {
-								background-color: $secondary-color;
-								color: $base-color;
-							}
-
-							::placeholder {
-								color: $base-color;
-							}
-
-							.perCustom {
-								border-radius: 15px;
-								text-align: center;
-								border: none;
-								color: $base-color;
-								background-color: #f3f8fb;
-							}
-
-							.perCustom:hover {
-								cursor: text;
-								border-radius: 15px;
-								background-color: white;
-								color: $base-color;
-								outline-color: $secondary-color;
-							}
-
-							.perCustom:focus {
-								border-radius: 15px;
-								outline-color: $focus-color;
-							}
 						}
 
-						.header2{
+						.inputBP {
 							width: 80%;
-							margin: 8px;
-							font-family: $main-font;
-							color: #00474b;
-							font-weight: 600;
-						}
-						img{
-							display: none;
-						}
-						.inputBP{
-							width: 80%;
-							text-align: right;
-							border: none;
-							background-color: #f3f8fb;
 							font-size: 1rem;
 							padding: 5px;
-							border-radius: 10px;
-							font-family: $main-font;
-							color: $base-color;
-							font-weight: 800;
-							border: 2px solid rgba(0, 0, 0, 0);
 						}
 					}
 				}
 
-				.results{
-					background-color: $base-color;
+				.results {
 					border-radius: 15px;
 
-					.resultsGrid{
+					.resultsGrid {
 						padding: 20px;
-						display: grid;
-						height: 100%;
 						grid:
 							"tipResult" 1fr
 							"totalResult" 1fr
-							"resetResult" .5fr;
+							"resetResult" 0.5fr;
 
-						.resFlex{
-							font-family: $main-font;
-							color: white;
-
-							.headerRes{
+						.resFlex {
+							.headerRes {
 								font-size: 1.2rem;
 								font-weight: 600;
 							}
 
-							.headerPer{
-								font-size: .8rem;
+							.headerPer {
+								font-size: 0.8rem;
 								padding-left: 10px;
 							}
-							.resNum{
-								color: $secondary-color;
-								font-size: 3rem;
+							.resNum {
 								text-align: right;
 								font-weight: 800;
 							}
@@ -432,14 +384,11 @@ $hover-colour: #c5e4e7;
 
 						.resetResult {
 							padding-top: 30px;
-							display: flex;
-							justify-content: center;
 							align-items: center;
-							.resetButton{
+							.resetButton {
 								display: flex;
 								justify-content: center;
 								align-items: center;
-								background-color: $secondary-color;
 								border-radius: 5px;
 								width: 95%;
 								height: 3rem;

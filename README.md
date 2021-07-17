@@ -15,3 +15,4 @@ Tip calculator app exersize from [FrontEndMentor.io](https://www.frontendmentor.
 17-07-2021
 
 - Fixed broken link in ReadMe.
+- Fixed duplicate SCSS (Code that appeared both in the mobile version and desktop.)
