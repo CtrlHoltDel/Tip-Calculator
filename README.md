@@ -1,6 +1,6 @@
 # Tip calculator
 
-App exersize from [FrontEndMentor.io](https://www.frontendmentor.io/)
+App exercize from [FrontEndMentor.io](https://www.frontendmentor.io/)
 
 ```Made in HTML, SCSS and vanilla JavaScript```
 
@@ -12,10 +12,10 @@ App exersize from [FrontEndMentor.io](https://www.frontendmentor.io/)
 - Initial commit with some HTML and styling.
 - Added Javascript which updates the amount based upon inputs.
 - Fixed Readme links.
-- Fixed a bug which stopped totals updating if number of people or bill were updated.
-- Minor CSS tweaks and added a warning for when the people field is empty whilst the others have inputs.
+- Fixed a bug that stopped totals updating if number of people or bill were updated.
+- Minor CSS tweaks and added a warning for when the people field is empty whilst the others have input.
 - Allowed tips of 0%.
-- Added media query in css for mobile design.
+- Added media query in CSS for mobile design.
 
 ### 17-07-2021
 
