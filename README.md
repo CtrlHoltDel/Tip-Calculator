@@ -1,6 +1,6 @@
 # Tip calculator
 
-App exercize from [FrontEndMentor.io](https://www.frontendmentor.io/)
+App exercise from [FrontEndMentor.io](https://www.frontendmentor.io/)
 
 ```Made in HTML, SCSS and vanilla JavaScript```
 
