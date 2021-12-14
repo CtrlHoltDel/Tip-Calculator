@@ -1,74 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<title>Tip calculator app</title>
-	</head>
-	<body>
-		<div class="header">SPLI<br />TTER</div>
-		<div class="paddingCont">
-			<div class="mainGrid">
-				<div class="leftGrid">
-					<div class="billInput gridComp">
-						<div class="header2">Bill</div>
-						<input type="number" class="inputBP" placeholder="0" id="inputBill" />
-						<img src="./images/icon-dollar.svg" class="dollarIcon" alt="" srcset="">
-					</div>
-					<div class="tipInput gridComp">
-						<div class="header2">Select Tip %</div>
-						<div class="perGrid">
-							<div class="perButton" id="per5">5%</div>
-							<div class="perButton" id="per10">10%</div>
-							<div class="perButton" id="per15">15%</div>
-							<div class="perButton" id="per25">25%</div>
-							<div class="perButton" id="per50">50%</div>
-							<input class="perButton perCustom" id="inputCustom" type="number" placeholder="Custom" />
-						</div>
-					</div>
-					<div class="peopleInput gridComp">
-						<div class="flexPeopleInput">
-							<div class="header2">Number of People </div>
-							<div class="warningTest" id="warningTestID">Can't be zero</div>
-						</div>
-						<input type="number" id="inputPeople" placeholder="0" class="inputBP" />
-						<img src="./images/icon-person.svg" class="personIcon"alt="" srcset="">
-					</div>
-				</div>
-				<div class="results">
-					<div class="resultsGrid">
-						<div class="tipResult resFlex">
-							<div>
-								<div class="headerRes">Tip Amount</div>
-								<div class="headerPer">
-									/&nbsp;&nbsp;&nbsp;person
-								</div>
-							</div>
-							<div id="tipAmount" class="resNum">$0.00</div>
-						</div>
-						<div class="totalResult resFlex">
-							<div>
-								<div class="headerRes">Total</div>
-								<div class="headerPer">
-									/&nbsp;&nbsp;&nbsp;person
-								</div>
-							</div>
-							<div id="totalAmount" class="resNum">$0.00</div>
-						</div>
-						<div class="resetResult">
-							<div class="resetButton">RESET</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-	<script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <div class="header">SPLI<br />TTER</div>
+    <div class="paddingCont">
+      <div class="mainGrid">
+        <div class="leftGrid">
+          <div class="billInput gridComp">
+            <div class="header2">Bill</div>
+            <input
+              type="number"
+              class="inputBP"
+              placeholder="0"
+              id="inputBill"
+            />
+            <img
+              src="./images/icon-dollar.svg"
+              class="dollarIcon"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="tipInput gridComp">
+            <div class="header2">Select Tip %</div>
+            <div class="perGrid">
+              <div class="perButton" id="5">5%</div>
+              <div class="perButton" id="10">10%</div>
+              <div class="perButton" id="15">15%</div>
+              <div class="perButton" id="25">25%</div>
+              <div class="perButton" id="50">50%</div>
+              <input
+                class="perButton perCustom"
+                type="number"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="peopleInput gridComp">
+            <div class="flexPeopleInput">
+              <div class="header2">Number of People</div>
+              <div class="warningTest" id="warningTestID">Can't be zero</div>
+            </div>
+            <input
+              type="number"
+              id="inputPeople"
+              placeholder="1"
+              class="inputBP"
+            />
+            <img
+              src="./images/icon-person.svg"
+              class="personIcon"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+        <div class="results">
+          <div class="resultsGrid">
+            <div class="tipResult resFlex">
+              <div>
+                <div class="headerRes">Tip Amount</div>
+                <div class="headerPer">/&nbsp;&nbsp;&nbsp;person</div>
+              </div>
+              <div id="tipAmount" class="resNum">0.00</div>
+            </div>
+            <div class="totalResult resFlex">
+              <div>
+                <div class="headerRes">Total</div>
+                <div class="headerPer">/&nbsp;&nbsp;&nbsp;person</div>
+              </div>
+              <div id="totalAmount" class="resNum">0.00</div>
+            </div>
+            <div class="resetResult">
+              <div class="resetButton">RESET</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
 </html>
